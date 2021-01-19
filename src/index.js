@@ -41,6 +41,13 @@ const take_screenshot = async () => {
                     });
                 });
             }
+        },{
+            launchOptions: {
+                args: [
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox'
+                ]
+            }
         });
     }catch (error){
         console.log('take_screenshot:error', JSON.stringify(error, null, 2));
