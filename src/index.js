@@ -10,8 +10,6 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 const take_screenshot = async () => {
     const date = moment().format("YYYY_MM_DD_H_m_s");
     const file = `${process.env.FOLDER_FILES}/${process.env.FILE_NAME}-${date}.${process.env.EXTENSION}`;
-    console.log('file', file);
-    console.log('process.env', process.env);
     let captureWebsiteFile;
     try{
         captureWebsiteFile = await captureWebsite.file(process.env.URL_SITE, file,{
