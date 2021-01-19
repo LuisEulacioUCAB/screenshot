@@ -55,7 +55,6 @@ const take_screenshot = async () => {
 
 const sendEmail = async (file) =>{
     const attachment = fs.readFileSync(file).toString("base64");
-    console.log('sendEmail:attachment', attachment);
     const senderEmails = process.env.SENDGRID_TO_EMAIL.split(",");
     const data = {
         to: senderEmails, // Change to your recipient
@@ -86,5 +85,4 @@ const sendEmail = async (file) =>{
 take_screenshot();
 
 
-//sendEmail()
 
